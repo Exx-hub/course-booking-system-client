@@ -16,8 +16,26 @@ const confirmPassword = document.querySelector('#confirm-password').value;
   
 
 // simple data validation 
-const isUserDataValid = (firstName !== "" && lastName !== "" && mobileNumber.length === 13 && emailAddress !== "" && password === confirmPassword && password !== "" && confirmPassword !== "") 
+const dataValid = (firstName !== "" && lastName !== "" && mobileNumber.length === 13 && emailAddress !== "" && password === confirmPassword && password !== "" && confirmPassword !== "") 
   
-
-console.log(isUserDataValid)
+if(dataValid){
+  // send request
+  fetch("https://alvinacosta-csp2-app-server.herokuapp.com/api/users/register",{
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: {
+        firstName,
+        lastName,
+        password,
+        emailAddress,
+        mobileNumber
+      }
+  })
+  .then(res => res.json())
+  .then(result => console.log(result));
+} else {
+  console.log("Data Invalid!")
+}
 })
