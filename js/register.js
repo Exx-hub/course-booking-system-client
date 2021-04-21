@@ -2,7 +2,7 @@ const registerForm = document.querySelector("#register-form");
 
 
 const emailValid = (email) => {
-      fetch() 
+      fetch("https://alvinacosta-csp2-app-server.herokuapp.com/api/users/check-email").then(res => res.json()).then(data => data.data); 
   }
 
 
@@ -29,35 +29,39 @@ registerForm.addEventListener("submit", e => {
     password !== "" &&
     confirmPassword !== "";
   
+  let emailAvail = emailValid();
+  
+  console.log(emailAvail);
+  
   
 
-  if (dataValid) {
-    // send request
-    fetch(
-      "https://alvinacosta-csp2-app-server.herokuapp.com/api/users/register",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          firstName,
-          lastName,
-          password,
-          emailAddress,
-          mobileNumber
-        })
-      }
-    )
-      .then(res => res.json())
-      .then(data => {
-        if (data.data) {
-          window.location.replace("/login.html");
-        } else {
-          alert("User created unsuccessfully..");
-        }
-      });
-  } else {
-    console.log("Data Invalid!");
-  }
+  // if (dataValid) {
+  //   // send request
+  //   fetch(
+  //     "https://alvinacosta-csp2-app-server.herokuapp.com/api/users/register",
+  //     {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json"
+  //       },
+  //       body: JSON.stringify({
+  //         firstName,
+  //         lastName,
+  //         password,
+  //         emailAddress,
+  //         mobileNumber
+  //       })
+  //     }
+  //   )
+  //     .then(res => res.json())
+  //     .then(data => {
+  //       if (data.data) {
+  //         window.location.replace("/login.html");
+  //       } else {
+  //         alert("User created unsuccessfully..");
+  //       }
+  //     });
+  // } else {
+  //   console.log("Data Invalid!");
+  // }
 });
