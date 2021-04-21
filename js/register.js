@@ -25,16 +25,16 @@ if(dataValid){
     headers: {
       "Content-Type": "application/json",
     },
-    body: {
+    body: JSON.stringify({
         firstName,
         lastName,
         password,
         emailAddress,
         mobileNumber
-      }
+      })
   })
   .then(res => res.json())
-  .then(result => console.log(result));
+  .then(data => console.log(data));
 } else {
   console.log("Data Invalid!")
 }
