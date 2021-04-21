@@ -16,6 +16,8 @@ const confirmPassword = document.querySelector('#confirm-password').value;
   
 
 // simple data validation 
-const isUserDataValid = (firstName !== "" && lastName !== "" && mobileNumber.length === 11 && emailAddress !== "" && password === confirmPassword && password !== "" && confirmPassword !== "") 
+const isUserDataValid = (firstName !== "" && lastName !== "" && mobileNumber.length === 13 && emailAddress !== "" && password === confirmPassword && password !== "" && confirmPassword !== "") 
   
+
+console.log(isUserDataValid)
 })
