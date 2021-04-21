@@ -1,5 +1,11 @@
 const registerForm = document.querySelector("#register-form");
 
+
+const emailValid = (email) => {
+      fetch() 
+  }
+
+
 registerForm.addEventListener("submit", e => {
   e.preventDefault();
 
@@ -22,6 +28,8 @@ registerForm.addEventListener("submit", e => {
     password === confirmPassword &&
     password !== "" &&
     confirmPassword !== "";
+  
+  
 
   if (dataValid) {
     // send request
