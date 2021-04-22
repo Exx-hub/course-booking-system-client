@@ -58,6 +58,7 @@ registerForm.addEventListener("submit", e => {
             .then(res => res.json())
             .then(data => {
               if (data.data) {
+                alert("Registration was successful!")
                 window.location.replace("/login.html");
               } else {
                 alert("User created unsuccessfully..");
