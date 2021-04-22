@@ -14,9 +14,27 @@ loginForm.addEventListener('submit', e => {
     console.log(emailAddress);
     console.log(password);
     
-    // fetch(path,option)
-    // .then(cb)
-    // .then(cb)
+    fetch("https://alvinacosta-csp2-app-server.herokuapp.com/api/users/login",{
+      method: "POST",
+      headers: {
+        "Content-type": "application/json"
+      },
+      body: JSON.stringify({
+        emailAddress,
+        password
+      })
+    })
+    .then(res => res.json())
+    .then(data => {
+      if(data.data){
+        // user is already registered
+        alert("Succesful login!")
+        window.location.replace('./courses.html');
+      } else {
+        // user not registered
+        alert('Please register first!')
+      }
+    })
     
   } else {
     alert("Missing fields!")
