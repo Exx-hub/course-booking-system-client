@@ -23,45 +23,48 @@ registerForm.addEventListener("submit", e => {
     password !== "" &&
     confirmPassword !== "";
 
- 
-
   if (dataValid) {
     // check email if existing
-      fetch("https://alvinacosta-csp2-app-server.herokuapp.com/api/users/register", {
-        method: "",
+    fetch(
+      "https://alvinacosta-csp2-app-server.herokuapp.com/api/users/check-email",
+      {
+        method: "GET",
         headers: {
           "Content-type": "application/json"
         },
-        body: JSON.stringify(emailAddress)
-      })
-      .then()
-      .then()
-    
-    
-    
-    
-    fetch(
-      "https://alvinacosta-csp2-app-server.herokuapp.com/api/users/register",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          firstName,
-          lastName,
-          password,
-          emailAddress,
-          mobileNumber
-        })
+        body: JSON.stringify({emailAddress})
       }
     )
       .then(res => res.json())
       .then(data => {
-        if (data.data) {
-          window.location.replace("/login.html");
+        if (!data.data) {
+          // register user if email can be used
+          fetch(
+            "https://alvinacosta-csp2-app-server.herokuapp.com/api/users/register",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json"
+              },
+              body: JSON.stringify({
+                firstName,
+                lastName,
+                password,
+                emailAddress,
+                mobileNumber
+              })
+            }
+          )
+            .then(res => res.json())
+            .then(data => {
+              if (data.data) {
+                window.location.replace("/login.html");
+              } else {
+                alert("User created unsuccessfully..");
+              }
+            });
         } else {
-          alert("User created unsuccessfully..");
+          alert("email is already in use");
         }
       });
   } else {
