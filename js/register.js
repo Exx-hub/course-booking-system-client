@@ -28,7 +28,7 @@ registerForm.addEventListener("submit", e => {
     fetch(
       "https://alvinacosta-csp2-app-server.herokuapp.com/api/users/check-email",
       {
-        method: "GET",
+        method: "POST",
         headers: {
           "Content-type": "application/json"
         },
@@ -37,7 +37,7 @@ registerForm.addEventListener("submit", e => {
     )
       .then(res => res.json())
       .then(data => {
-        if (!data.data) {
+        if (!data.data) { // if email is not in database post a new user..
           // register user if email can be used
           fetch(
             "https://alvinacosta-csp2-app-server.herokuapp.com/api/users/register",
@@ -63,7 +63,7 @@ registerForm.addEventListener("submit", e => {
                 alert("User created unsuccessfully..");
               }
             });
-        } else {
+        } else { // if email already in database
           alert("email is already in use");
         }
       });
