@@ -26,7 +26,17 @@ registerForm.addEventListener("submit", e => {
  
 
   if (dataValid) {
-    // check email if exis
+    // check email if existing
+      fetch("https://alvinacosta-csp2-app-server.herokuapp.com/api/users/register", {
+        method: "",
+        headers: {
+          "Content-type": "application/json"
+        },
+        body: JSON.stringify(emailAddress)
+      })
+      .then()
+      .then()
+    
     
     
     
