@@ -48,7 +48,7 @@ loginForm.addEventListener("submit", e => {
             });
         } else {
           // user not registered
-          alert("Please register first!");
+          alert("Unregistered email or incorrect password.");
         }
       });
   } else {
