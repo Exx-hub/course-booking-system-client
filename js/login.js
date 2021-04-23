@@ -41,6 +41,9 @@ loginForm.addEventListener("submit", e => {
             .then(data => {
             
               console.log(data)
+              
+            localStorage.setItem('userId', data.userDetails._id)
+            localStorage.setItem('isAdmin', data.userDetails.isAdmin)
               alert("Succesful login!");
               window.location.replace("./courses.html");
             });
