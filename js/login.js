@@ -29,7 +29,9 @@ loginForm.addEventListener("submit", e => {
         if (data.data) { // means valid login details
           
           // Authentication
-
+          const {_id: userId} = data.userDetails;
+          console.log(userId);
+          
           // Retrieve complete user details
           // fetch(path)
           //   .then(cb)
