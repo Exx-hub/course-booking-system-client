@@ -27,19 +27,22 @@ loginForm.addEventListener("submit", e => {
       .then(res => res.json())
       .then(data => {
         if (data.data) { // means valid login details
-          
+                         // user is already registered
           // Authentication
           const {_id: userId} = data.userDetails;
           console.log(userId);
           
           // Retrieve complete user details
-          // fetch(path)
-          //   .then(cb)
-          //   .then(cb);
+          fetch(`https://alvinacosta-csp2-app-server.herokuapp.com/api/users/details?id=${userId}`)
+            .then(res => res.json())
+            .then(data => {
+            
+                alert("Succesful login!");
+                window.location.replace("./courses.html");
+          });
 
-          // user is already registered
-          alert("Succesful login!");
-          window.location.replace("./courses.html");
+         
+          
         } else {
           // user not registered
           alert("Please register first!");
