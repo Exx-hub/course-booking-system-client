@@ -1,13 +1,8 @@
-let isAdmin = localStorage.getItem("isAdmin");
-console.log(isAdmin)
+const createCourse = document.querySelector("#admin-button");
 
-let userId = localStorage.getItem("userId");
-console.log(userId)
+console.log(isAdmin);
+console.log(userId);
 
-const createCourse = document.querySelector('#admin-button');
-
-
-if(!isAdmin || isAdmin === "false") {
-    createCourse.innerHTML = null;
-} 
-
+if (!isAdmin || isAdmin === "false") {
+  createCourse.innerHTML = null;
+}
