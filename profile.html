@@ -35,9 +35,11 @@
     />
 
     <!-- external css -->
-    <link rel="stylesheet" href="./../assets/css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
+   
+      <!--     NAVIGATION -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
       <a class="navbar-brand" href="./index.html"> BigBooker </a>
       <button
@@ -58,25 +60,24 @@
             <a href="./courses.html" class="nav-link"> Courses </a>
           </li>
 
-          <li class="nav-item active">
-            <a href="./profile.html" class="nav-link userIn hidden"> Profile </a>
+          <li class="nav-item active userIn hidden">
+            <a href="./profile.html" class="nav-link"> Profile </a>
           </li>
 
-          <li class="nav-item ">
-            <a href="./register.html" class="nav-link userOut"> Register </a>
+          <li class="nav-item userOut">
+            <a href="./register.html" class="nav-link"> Register </a>
           </li>
 
-          <li class="nav-item ">
-            <a href="./login.html" class="nav-link userOut"> LOGIN </a>
+          <li class="nav-item userOut">
+            <a id="log-out" href="./login.html" class="nav-link"> Log In </a>
           </li>
 
-          <li class="nav-item ">
-            <a id="log-out" href="#" class="nav-link userIn hidden"> Log Out </a>
+          <li class="nav-item userIn hidden">
+            <a id="log-out" href="#" class="nav-link"> Log Out </a>
           </li>
         </ul>
       </div>
     </nav>
-
     <!-- end nav -->
 
     <main class="container my-5">
@@ -126,7 +127,7 @@
     </script>
 
     <!-- external global js -->
-    <script src="./../assets/js/script.js"></script>
-    <script src="./../assets/js/profile.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/profile.js"></script>
   </body>
 </html>

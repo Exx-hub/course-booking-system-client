@@ -23,3 +23,9 @@ if(userId !== null && typeof userId === 'string'){
 
 
 // logout the user
+let logOutLink = document.querySelector('#log-out');
+
+logOutLink.addEventListener('click', (e) => {
+    localStorage.clear();
+  window.location.replace('/login.html');
+})
