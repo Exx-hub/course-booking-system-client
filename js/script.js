@@ -20,3 +20,6 @@ if(userId !== null && typeof userId === 'string'){
  
   userOutNavs.forEach(item => item.classList.toggle("hidden"));
 }
+
+
+// logout the user
