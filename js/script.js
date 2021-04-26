@@ -2,6 +2,8 @@ let isAdmin = localStorage.getItem("isAdmin");
 // console.log(isAdmin)
 
 let userId = localStorage.getItem("userId");
+let firstName = localStorage.getItem("firstName");
+console.log(firstName)
 
 
 
@@ -29,3 +31,11 @@ logOutLink.addEventListener('click', (e) => {
     localStorage.clear();
   window.location.replace('/login.html');
 })
+
+
+let name = localStorage.getItem('firstName')
+
+let profileLink = document.querySelector('#profile-link');
+
+
+profileLink.innerText = name;

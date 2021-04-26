@@ -40,6 +40,7 @@ loginForm.addEventListener("submit", e => {
 
               localStorage.setItem("userId", data.userDetails._id);
               localStorage.setItem("isAdmin", data.userDetails.isAdmin);
+              localStorage.setItem("firstName", data.userDetails.firstName);
               alert("Succesful login!");
               window.location.replace("./courses.html");
             });
