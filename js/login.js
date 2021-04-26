@@ -12,9 +12,6 @@ loginForm.addEventListener("submit", e => {
   const isValid = emailAddress !== "" && password !== "";
 
   if (isValid) {
-    console.log(emailAddress);
-    console.log(password);
-
     fetch("https://alvinacosta-csp2-app-server.herokuapp.com/api/users/login", {
       method: "POST",
       headers: {
@@ -32,8 +29,7 @@ loginForm.addEventListener("submit", e => {
           // user is already registered
           // Authentication
           const { _id: userId } = data.userDetails;
-          console.log(userId);
-
+          
           // Retrieve complete user details
           fetch(
             `https://alvinacosta-csp2-app-server.herokuapp.com/api/users/details?id=${userId}`
