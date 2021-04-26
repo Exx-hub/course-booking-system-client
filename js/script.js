@@ -32,10 +32,10 @@ logOutLink.addEventListener('click', (e) => {
   window.location.replace('/login.html');
 })
 
-
-let name = localStorage.getItem('firstName')
-
+// change profile link to logged in user's firstname
+let name = localStorage.getItem('firstName');
 let profileLink = document.querySelector('#profile-link');
 
-
-profileLink.innerText = name;
+if(profileLink){
+    profileLink.innerText = name;
+}
