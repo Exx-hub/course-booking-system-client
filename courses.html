@@ -38,9 +38,8 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    
-<!--     NAVIGATION -->
-    
+    <!--     NAVIGATION -->
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
       <a class="navbar-brand" href="./index.html"> BigBooker </a>
       <button
@@ -79,11 +78,11 @@
         </ul>
       </div>
     </nav>
-    
+
     <!-- end nav -->
 
-<!--     JUMBOTRON / HEADING -->
-    
+    <!--     JUMBOTRON / HEADING -->
+
     <header class="jumbotron text-center">
       <h1>BigBooker Services</h1>
       <p class="lead">Booking for everyone, everywhere</p>
@@ -92,10 +91,16 @@
 
     <!-- end jumbo -->
 
-<!--     COURSES CARDS ROW -->
-    
+    <!--     COURSES CARDS ROW -->
+
     <main class="container my-5">
-      <div id="adminButton" class="row"></div>
+      <div id="admin-button" class="row">
+        <div class="col-md-3 offset-md-9">
+          <a href="./add_course.html" class="btn btn-block btn-primary">
+            Create a new course
+          </a>
+        </div>
+      </div>
       <div id="coursesContainer" class="row">
         <div class="col-md-12">
           <section class="jumbotron text-center my-5">
@@ -106,20 +111,19 @@
           </section>
         </div>
       </div>
-      
+
       <!-- end row -->
     </main>
     <!-- end cards -->
 
-<!--     FOOTER -->
+    <!--     FOOTER -->
     <footer class="footer bg-primary">
       <p class="p-3 mb-0 text-center text-white">
         Copyright &copy; 2021 by Alvin Acosta
       </p>
     </footer>
-<!--   end footer -->
-    
-    
+    <!--   end footer -->
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
