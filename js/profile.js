@@ -27,14 +27,23 @@ if (uId === null && typeof uId !== "string") {
       // Display data on fronend
       profileContainer.innerHTML = `
               <div class="col-md-12">
-              <section class="jumbotron my-5">
+              <section class="my-5">
               <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label">Email address</label>
-              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+              <label for="first-name" class="form-label">First Name</label>
+              <input type="text" class="form-control" id="first-name" value="${firstName}" readOnly>
               </div>
-              <h3 class="text-center">First Name: ${firstName}</h3>
-              <h3 class="text-center">Last Name: ${lastName}</h3>
-              <h3 class="text-center">Email: ${emailAddress}</h3>
+              
+              <div class="mb-3">
+              <label for="last-name" class="form-label">Last Name</label>
+              <input type="text" class="form-control" id="last-name" value="${lastName}" readOnly>
+              </div>
+              
+              <div class="mb-3">
+              <label for="email-address" class="form-label">Email address</label>
+              <input type="text" class="form-control" id="email-address" value="${emailAddress}" readOnly>
+              </div>
+              
+             
               <h3 class="mt-5">Enrollment History</h3>
                 <table class="table">
                 <thead>
