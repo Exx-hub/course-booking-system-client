@@ -1,8 +1,12 @@
-const profileContainer = document.querySelector('#profile-container');
+const profileContainer = document.querySelector("#profile-container");
 
-
-if(!userId){
-  window.location.replace('./login.html')
+if (localStorage.getItem("userId") === null) {
+  window.location.replace("./login.html");
 } else {
-  alert('User is logged in!')
+  fetch(`https://alvinacosta-csp2-app-server.herokuapp.com/api/users/details?id=${}`,{
+    method: "",
+    headers:
+  })
+    .then(res => res.json())
+    .then();
 }
