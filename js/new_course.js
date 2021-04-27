@@ -1,8 +1,8 @@
-let loggedIn = localStorage.getItem('userId');
-let admin = localStorage.getItem("isAdmin");
 
-if(!loggedIn){
-  window.location.replace('./login.hmtml');
+if (userId !== null && typeof userId === "string") {
+  // User is logged-in
+    
 } else {
-  
+  // User is not logged-in
+  window.location.replace("./login.html");
 }
