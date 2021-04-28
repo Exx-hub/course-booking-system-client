@@ -4,26 +4,24 @@ if (!isAdmin || isAdmin === "false") {
   createCourse.innerHTML = null;
 }
 
-
-
 // retrieve all courses from databsae
 fetch("https://alvinacosta-csp2-app-server.herokuapp.com/api/courses")
   .then(res => res.json())
   .then(data => {
     // console.log(data.courses);
-  
-  // filter active courses if user is authenticated or is not admin
-  let coursesList;
-  
-  if(!isAdmin){
-     coursesList = data.courses.filter(course => course.isActive)
-  } else {
-    coursesList = data.courses
-  }
-  
-  // display all courses
+
+    // filter active courses if user is authenticated or is not admin
+    let coursesList;
+
+    if (!isAdmin) {
+      coursesList = data.courses.filter(course => course.isActive);
+    } else {
+      coursesList = data.courses;
+    }
+
+    // display all courses
     const coursesElements = coursesList.map(course => {
-        return `
+      return `
         <div class="col-md-6 my-3">
           <div class='card'>
               <div class='card-body'>
@@ -50,9 +48,11 @@ fetch("https://alvinacosta-csp2-app-server.herokuapp.com/api/courses")
                </div>
             </div>
         </div>
-        `
-    })
-  
+        `;
+    });
+
     // display courses fetched from database on the course page
-    document.querySelector("#courses-container").innerHTML = coursesElements.join("");
+    document.querySelector(
+      "#courses-container"
+    ).innerHTML = coursesElements.join("");
   });
