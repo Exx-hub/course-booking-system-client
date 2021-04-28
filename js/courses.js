@@ -13,7 +13,7 @@ fetch("https://alvinacosta-csp2-app-server.herokuapp.com/api/courses")
     // filter active courses if user is authenticated or is not admin
     let coursesList;
 
-    if (!isAdmin) {
+    if (isAdmin === null || isAdmin === "false") {
       coursesList = data.courses.filter(course => course.isActive);
     } else {
       coursesList = data.courses;
