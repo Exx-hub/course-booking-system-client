@@ -12,10 +12,17 @@ fetch("https://alvinacosta-csp2-app-server.herokuapp.com/api/courses")
   .then(data => {
     // console.log(data.courses);
   
+  // filter active courses if user is authenticated or is not admin
+  let coursesList;
   
+  if(!isAdmin){
+     coursesList = data.courses.filter(course => course.isActive)
+  } else {
+    coursesList = data.courses
+  }
   
   // display all courses
-    const coursesElements = data.courses.map(course => {
+    const coursesElements = coursesList.map(course => {
         return `
         <div class="col-md-6 my-3">
           <div class='card'>
