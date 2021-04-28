@@ -11,6 +11,10 @@ fetch("https://alvinacosta-csp2-app-server.herokuapp.com/api/courses")
   .then(res => res.json())
   .then(data => {
     // console.log(data.courses);
+  
+  
+  
+  // display all courses
     const coursesElements = data.courses.map(course => {
         return `
         <div class="col-md-6 my-3">
@@ -43,5 +47,5 @@ fetch("https://alvinacosta-csp2-app-server.herokuapp.com/api/courses")
     })
   
     // display courses fetched from database on the course page
-    document.querySelector("#courses-container").innerHTML = coursesElements;
+    document.querySelector("#courses-container").innerHTML = coursesElements.join("");
   });
