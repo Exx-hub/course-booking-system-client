@@ -1,3 +1,9 @@
 .hidden {
   display: none;
 }
+
+.nav-logo {
+  height: 60px;
+  width: 100px;
+  object-fit: contain;
+}
