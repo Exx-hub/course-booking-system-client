@@ -1,8 +1,4 @@
-if(userId){
-  window.location.replace('./index.html')
-} else {
-  
-}
+if(userId) window.history.back();
 
 const registerForm = document.querySelector("#register-form");
 

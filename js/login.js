@@ -1,11 +1,8 @@
 /// https://alvinacosta-csp2-app-server.herokuapp.com/  -- original capstone heroku server
 ///  https://backup-capstone-vscode.herokuapp.com/ -- vscode version endpoint on heroku
 
-if(userId){
-  window.location.replace('./index.html')
-} else {
-  
-}
+if(userId) window.history.back();
+ 
 
 
 const loginForm = document.querySelector("#login-form");
