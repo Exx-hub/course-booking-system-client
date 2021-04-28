@@ -1,3 +1,9 @@
+if(userId){
+  window.location.replace('./index.html')
+} else {
+  
+}
+
 const registerForm = document.querySelector("#register-form");
 
 registerForm.addEventListener("submit", e => {
@@ -72,3 +78,5 @@ registerForm.addEventListener("submit", e => {
     console.log("Data Invalid!");
   }
 });
+
+
