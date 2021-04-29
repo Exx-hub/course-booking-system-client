@@ -20,3 +20,12 @@ fetch(
   });
 
 
+// do not allow unauthenticated users or admins to enroll
+if(userId === null || isAdmin === "true"){
+    
+}
+
+
+if (!isAdmin || isAdmin === "false") {
+  createCourse.innerHTML = null;
+}
