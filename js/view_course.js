@@ -22,10 +22,7 @@ fetch(
 
 // do not allow unauthenticated users or admins to enroll
 if(userId === null || isAdmin === "true"){
-    
+  document.querySelector("#enrollment-container").innerHTML = null;
 }
 
 
-if (!isAdmin || isAdmin === "false") {
-  createCourse.innerHTML = null;
-}
