@@ -1,0 +1,1 @@
+cosnt queryStringObject = new URLSearchParams(window.location.search);
