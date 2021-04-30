@@ -40,7 +40,7 @@ if (userId === null || isAdmin === "true") {
     })
       .then(res => res.json())
       .then(data => {
-        console.dir(data.message);
+        console.dir(data);
 
         // if (data.message) {
         //   alert("New enrollment to a course was successful.");
