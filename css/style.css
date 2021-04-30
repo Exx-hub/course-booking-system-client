@@ -8,13 +8,15 @@
 
 body {
 	font-family: "Montserrat", sans-serif;
-	/* font-family: "Open Sans", sans-serif; */
 }
 
 .hidden {
 	display: none;
 }
 
+.navbar {
+	padding: 20px;
+}
 .navbar-black {
 	background-color: black;
 }
@@ -27,7 +29,7 @@ body {
 	object-fit: contain;
 }
 
-a {
+.nav-link {
 	font-family: "Open Sans", sans-serif;
 	font-weight: 800 !important;
 	text-transform: uppercase;
@@ -36,6 +38,9 @@ a {
 
 .footer {
 	background-color: #055ac9;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
 }
 
 /* #hero-image {
@@ -64,4 +69,26 @@ a {
 }
 #hero-content {
 	position: relative;
+} */
+
+#index-hero {
+	background-image: url("../assets/images/srf3.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 0;
+	height: 45vh;
+}
+
+#course-hero {
+	background-image: url("../assets/images/srfbrds2.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 0;
+	height: 45vh;
+}
+
+/* #hero-content {
+	background-color: red;
 } */
