@@ -1,7 +1,42 @@
-.hidden {
-  display: none;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Open+Sans:wght@300;400;600;700&display=swap");
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
 
+body {
+	font-family: "Montserrat", sans-serif;
+	/* font-family: "Open Sans", sans-serif; */
+}
+
+.hidden {
+	display: none;
+}
+
+.navbar-black {
+	background-color: black;
+}
+.navbar-white {
+	background-color: white;
+}
+
+.nav-logo {
+	height: 40px;
+	object-fit: contain;
+}
+
+a {
+	font-family: "Open Sans", sans-serif;
+	font-weight: 800 !important;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.footer {
+	background-color: #055ac9;
+}
 
 /* #hero-image {
   background-image: url('https://cdn.glitch.com/1498b52d-28c8-43b0-8db0-18c74e93273c%2Fsrf6.jpg?v=1619692994192');
@@ -10,26 +45,23 @@
   background-position: center center;
 /*   background-color: red; */
 
-
-
-
-#hero-image {
-  position: relative;
+/* #hero-image {
+	position: relative;
 }
 #hero-image:before {
-  content: " ";
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.6;
-  background-image: url("https://cdn.glitch.com/1498b52d-28c8-43b0-8db0-18c74e93273c%2Fsrf6.jpg?v=1619692994192");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
+	content: " ";
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.6;
+	background-image: url("https://cdn.glitch.com/1498b52d-28c8-43b0-8db0-18c74e93273c%2Fsrf6.jpg?v=1619692994192");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 #hero-content {
-  position: relative;
-}
+	position: relative;
+} */
