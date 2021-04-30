@@ -56,7 +56,7 @@ if (uId === null && typeof uId !== "string") {
                 </tr>
                 </thead>
                   <tbody>
-                    ${enrollments[0][0]}
+                    ${enrollments}
                   </tbody>
                 </table> 
             </section>

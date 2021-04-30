@@ -21,35 +21,31 @@ fetch(
 const btnEnroll = document.querySelector("#btn-enroll");
 
 // do not allow unauthenticated users or admins to enroll
+
 if (userId === null || isAdmin === "true") {
   btnEnroll.style.display = "none";
 } else {
   btnEnroll.addEventListener("click", event => {
-    // fetch request
-    fetch(
-      "https://alvinacosta-csp2-app-server.herokuapp.com/api/users/enroll",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          userId,
-          courseId
-        })
+    fetch("https://alvinacosta-csp2-app-server.herokuapp.com/api/users/enroll", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        userId: userId,
+        courseId: courseId
       })
-    .then(res => res.json())
-    .then(data => {
-      
-      if(data){
-        // enrollment successful
-        alert("Congrats!");
-        window.location.replace('./courses.html')
-      } else {
-        // unsuccessful
-        alert("unsuccessful")
-      }
-      
     })
+      .then(res => res.json())
+      .then(data => {
+        // console.dir(data.message);
+
+        if (data.message) {
+          alert("New enrollment to a course was successful.");
+          window.location.replace("./courses.html");
+        } else {
+          alert("Error: New enrollment to a course encountered a problem.");
+        }
+      });
   });
 }
