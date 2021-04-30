@@ -37,13 +37,19 @@ if (userId === null || isAdmin === "true") {
           userId,
           courseId
         })
-      }
-    )
+      })
     .then(res => res.json())
     .then(data => {
-      console.log(data)
-      alert("enrolled successfuly!")
-      window.location.replace("./profile.html");
+      
+      if(data){
+        // enrollment successful
+        alert("Congrats!");
+        window.location.replace('./courses.html')
+      } else {
+        // unsuccessful
+        alert("unsuccessful")
+      }
+      
     })
   });
 }

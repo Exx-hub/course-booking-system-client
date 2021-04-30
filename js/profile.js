@@ -23,6 +23,8 @@ if (uId === null && typeof uId !== "string") {
         mobileNumber,
         enrollments
       } = data.userDetails;
+    
+    console.log(enrollments)
 
       // Display data on fronend
       profileContainer.innerHTML = `
@@ -54,7 +56,7 @@ if (uId === null && typeof uId !== "string") {
                 </tr>
                 </thead>
                   <tbody>
-                    ${enrollments}
+                    ${enrollments[0][0]}
                   </tbody>
                 </table> 
             </section>
