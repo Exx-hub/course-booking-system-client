@@ -33,8 +33,17 @@ if (userId === null || isAdmin === "true") {
         headers: {
           "Content-Type": "application/json"
         },
-        body: JSON.stringify()
+        body: JSON.stringify({
+          userId,
+          courseId
+        })
       }
-    );
+    )
+    .then(res => res.json())
+    .then(data => {
+      console.log(data)
+      alert("enrolled successfuly!")
+      window.location.replace("./profile.html");
+    })
   });
 }
