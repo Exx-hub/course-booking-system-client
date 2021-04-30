@@ -42,12 +42,12 @@ if (userId === null || isAdmin === "true") {
       .then(data => {
         console.dir(data);
 
-        // if (data.message) {
-        //   alert("New enrollment to a course was successful.");
-        //   window.location.replace("./courses.html");
-        // } else {
-        //   alert("Error: New enrollment to a course encountered a problem.");
-        // }
+        if (data.message) {
+          alert("New enrollment to a course was successful.");
+          window.location.replace("./courses.html");
+        } else {
+          alert("Error: New enrollment to a course encountered a problem.");
+        }
       });
   });
 }
