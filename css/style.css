@@ -43,6 +43,25 @@ body {
 }
 
 
+#index-hero {
+	background-image: url("https://cdn.glitch.com/1498b52d-28c8-43b0-8db0-18c74e93273c%2Fsrf3.jpg?v=1619767381732");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 0;
+	height: 45vh;
+}
+
+#course-hero {
+	background-image: url("https://cdn.glitch.com/1498b52d-28c8-43b0-8db0-18c74e93273c%2Fsrfbrds2.jpg?v=1619767389830");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 0;
+	height: 45vh;
+}
+
+
 /* #hero-image {
   background-image: url('https://cdn.glitch.com/1498b52d-28c8-43b0-8db0-18c74e93273c%2Fsrf6.jpg?v=1619692994192');
   background-size: cover;
