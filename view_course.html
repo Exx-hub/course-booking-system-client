@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no"
+    />
+
+    <!--     favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://cdn.glitch.com/1498b52d-28c8-43b0-8db0-18c74e93273c%2Fficonsm.ico?v=1619690530172"
+    />
+
+    <title>SRF MNL | View Course</title>
+
+    <!-- fontawesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+      crossorigin="anonymous"
+    />
+
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- animate on scroll *optional* -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- bootstrap css -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+
+    <!-- external css -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!--     NAVIGATION -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+      <a class="navbar-brand" href="./index.html">SRF MNL</a>
+      <button
+        class="navbar-toggler"
+        data-toggle="collapse"
+        data-target="#zuitterNav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="zuitterNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a href="./index.html" class="nav-link"> Home </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="./courses.html" class="nav-link"> Courses </a>
+          </li>
+
+          <li class="nav-item userIn hidden">
+            <a id="profile-link" href="./profile.html" class="nav-link">
+              Profile
+            </a>
+          </li>
+
+          <li class="nav-item userOut">
+            <a href="./register.html" class="nav-link"> Register </a>
+          </li>
+
+          <li class="nav-item userOut">
+            <a href="./login.html" class="nav-link"> Log In </a>
+          </li>
+
+          <li class="nav-item userIn hidden">
+            <a id="log-out" href="#" class="nav-link"> Log Out </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- end nav -->
+
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-md-6 offset-md-3 pt-4">
+          <section class="jumbotron">
+            <h2 id="course-name">Fetching course details...</h2>
+            <p id="course-description" class="lead"></p>
+            <p class="secondary">Price: ₱ <span id="course-price"></span></p>
+            <span id="enrollment-container">
+              <button id="btn-enroll" class="btn btn-block btn-primary">
+                Enroll
+              </button>
+            </span>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer bg-primary">
+      <p class="p-3 mb-0 text-center text-white">
+        Copyright &copy; 2021 by Alvin Acosta
+      </p>
+    </footer>
+    <!-- end footer -->
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- AOS initialization -->
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- global js -->
+    <script src="./js/script.js"></script>
+
+    <!-- external js -->
+    <script src="./js/view_course.js"></script>
+  </body>
+</html>

@@ -13,7 +13,7 @@ fetch("https://alvinacosta-csp2-app-server.herokuapp.com/api/courses")
     // filter active courses if user is authenticated or is not admin
     let coursesList;
 
-    if (!isAdmin) {
+    if (isAdmin === null || isAdmin === "false") {
       coursesList = data.courses.filter(course => course.isActive);
     } else {
       coursesList = data.courses;
@@ -36,7 +36,7 @@ fetch("https://alvinacosta-csp2-app-server.herokuapp.com/api/courses")
                   <div class='card-footer'>
                     <div class="row">
                       <div class="col-sm-12 col-md-4 mb-1">
-                        <a href="./course.html?id=${course._id}" class="btn btn-outline-primary btn-block btn-course">View</a>
+                        <a href="./view_course.html?id=${course._id}" class="btn btn-outline-primary btn-block btn-course">View</a>
                       </div>
                       <div class="col-sm-12 col-md-4 mb-1">
                         <a href="./edit_course.html?id=${course._id}" class="btn btn-outline-secondary btn-block btn-course">Edit</a>
