@@ -1,3 +1,5 @@
+// https://backup-capstone-vscode.herokuapp.com/api/users/enroll
+
 const queryStringObject = new URLSearchParams(window.location.search);
 
 const courseId = queryStringObject.get("id");
