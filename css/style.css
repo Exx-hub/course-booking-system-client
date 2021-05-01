@@ -8,6 +8,7 @@
 
 body {
 	font-family: "Montserrat", sans-serif;
+	background-image: url("../assets/images/image.jpg");
 }
 
 .hidden {
@@ -35,13 +36,6 @@ body {
 	letter-spacing: 2px;
 }
 
-.footer {
-	background-color: #055ac9;
-	position: fixed;
-	bottom: 0;
-	width: 100%;
-}
-
 #index-hero {
 	background-image: url("https://cdn.glitch.com/1498b52d-28c8-43b0-8db0-18c74e93273c%2Fsrf3.jpg?v=1619767381732");
 	background-size: cover;
@@ -49,6 +43,29 @@ body {
 	background-position: center;
 	border-radius: 0;
 	height: 45vh;
+}
+#hero-image {
+	width: 35%;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	filter: drop-shadow(0px 5px 5px black);
+}
+#hero-heading {
+	font-weight: 800;
+	color: black;
+	font-size: 1.5em;
+}
+
+#hero-button {
+	background-color: black;
+	color: white;
+	border: 1px solid lightgray;
+	font-weight: bold;
+}
+#hero-content {
+	width: 50%;
+	text-align: center;
+	transform: translateY(-10px);
 }
 
 #course-hero {
@@ -60,30 +77,90 @@ body {
 	height: 45vh;
 }
 
-/* #hero-image {
-  background-image: url('https://cdn.glitch.com/1498b52d-28c8-43b0-8db0-18c74e93273c%2Fsrf6.jpg?v=1619692994192');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-/*   background-color: red; */
+#course-hero-image {
+	width: 25%;
+	border-radius: 5px;
+	filter: drop-shadow(0px 5px 5px black);
+}
 
-/* #hero-image {
-  position: relative;
+#course-heading {
+	font-weight: 800;
+	color: black;
+	text-align: center;
 }
-#hero-image:before {
-  content: " ";
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.6;
-  background-image: url("https://cdn.glitch.com/1498b52d-28c8-43b0-8db0-18c74e93273c%2Fsrf6.jpg?v=1619692994192");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
+
+#create-course-btn {
+	background-color: black;
+	color: white;
+	border: 1px solid lightgray;
+	font-weight: bold;
 }
-#hero-content {
-  position: relative;
-} */
+
+.card {
+	border-radius: 8px;
+	box-shadow: 5px 10px 17px -7px rgba(0, 0, 0, 0.75);
+}
+
+.card-image {
+	width: 100%;
+	height: 170px;
+}
+.card-title {
+	margin-top: 10px;
+}
+.cards-container {
+	transform: translateY(-100px);
+}
+
+.footer {
+	background-color: black;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	font-size: 0.7em;
+	opacity: 0.7;
+}
+
+@media screen and (max-width: 1024px) {
+	#hero-image {
+		width: 42%;
+	}
+	#hero-heading {
+		font-size: 1.3em;
+	}
+	.card-text {
+		font-size: 0.9em;
+	}
+	.card-image {
+		height: 160px;
+	}
+
+	#course-hero-image {
+		width: 30%;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	#hero-image {
+		width: 75%;
+	}
+	#hero-heading {
+		font-size: 1em;
+	}
+	#hero-content {
+		width: 60%;
+		text-align: center;
+		margin-top: 20px;
+	}
+	#hero-button {
+		width: 60%;
+		font-size: 0.8em;
+	}
+	.cards-container {
+		transform: translateY(-80px);
+	}
+	#course-hero-image {
+		width: 50%;
+		transform: translateY(30px);
+	}
+}
