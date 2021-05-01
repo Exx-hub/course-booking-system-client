@@ -28,16 +28,19 @@ if (userId === null || isAdmin === "true") {
   btnEnroll.style.display = "none";
 } else {
   btnEnroll.addEventListener("click", event => {
-    fetch("https://alvinacosta-csp2-app-server.herokuapp.com/api/users/enroll", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        userId: userId,
-        courseId: courseId
-      })
-    })
+    fetch(
+      "https://alvinacosta-csp2-app-server.herokuapp.com/api/users/enroll",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          userId: userId,
+          courseId: courseId
+        })
+      }
+    )
       .then(res => res.json())
       .then(data => {
         console.dir(data);
