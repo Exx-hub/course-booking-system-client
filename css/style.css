@@ -13,7 +13,10 @@ body {
 .hidden {
 	display: none;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 603f46ec58dce370ad9825b10dbabb625fe6e0a4
 .navbar {
 	padding: 20px;
 }
@@ -34,6 +37,35 @@ body {
 	font-weight: 800 !important;
 	text-transform: uppercase;
 	letter-spacing: 2px;
+<<<<<<< HEAD
+=======
+}
+
+.footer {
+	background-color: #055ac9;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
+
+#index-hero {
+	background-image: url("https://cdn.glitch.com/1498b52d-28c8-43b0-8db0-18c74e93273c%2Fsrf3.jpg?v=1619767381732");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 0;
+	height: 45vh;
+}
+
+#course-hero {
+	background-image: url("https://cdn.glitch.com/1498b52d-28c8-43b0-8db0-18c74e93273c%2Fsrfbrds2.jpg?v=1619767389830");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 0;
+	height: 45vh;
+>>>>>>> 603f46ec58dce370ad9825b10dbabb625fe6e0a4
 }
 
 .footer {
@@ -50,8 +82,16 @@ body {
   background-position: center center;
 /*   background-color: red; */
 
+<<<<<<< HEAD
 /* #hero-image {
 	position: relative;
+=======
+
+
+
+/* #hero-image {
+  position: relative;
+>>>>>>> 603f46ec58dce370ad9825b10dbabb625fe6e0a4
 }
 #hero-image:before {
 	content: " ";
@@ -68,6 +108,7 @@ body {
 	background-position: center center;
 }
 #hero-content {
+<<<<<<< HEAD
 	position: relative;
 } */
 
@@ -92,3 +133,7 @@ body {
 /* #hero-content {
 	background-color: red;
 } */
+=======
+  position: relative;
+} */
+>>>>>>> 603f46ec58dce370ad9825b10dbabb625fe6e0a4

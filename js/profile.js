@@ -23,6 +23,8 @@ if (uId === null && typeof uId !== "string") {
         mobileNumber,
         enrollments
       } = data.userDetails;
+    
+    console.log(enrollments)
 
       // Display data on fronend
       profileContainer.innerHTML = `
