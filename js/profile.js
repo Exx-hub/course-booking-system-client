@@ -29,24 +29,9 @@ if (uId === null && typeof uId !== "string") {
 			// Display data on fronend
 			profileContainer.innerHTML = `
               <div class="col-md-12">
+			  <p class="m-2">Name: ${firstName} ${lastName}</p>
+			  <p class="m-2">Email: ${emailAddress}</p>
               <section class="my-5">
-              <div class="mb-3">
-              <label for="first-name" class="form-label">First Name</label>
-              <input type="text" class="form-control" id="first-name" value="${firstName}" readOnly>
-              </div>
-              
-              <div class="mb-3">
-              <label for="last-name" class="form-label">Last Name</label>
-              <input type="text" class="form-control" id="last-name" value="${lastName}" readOnly>
-              </div>
-              
-              <div class="mb-3">
-              <label for="email-address" class="form-label">Email address</label>
-              <input type="text" class="form-control" id="email-address" value="${emailAddress}" readOnly>
-              </div>
-              
-             
-              <h3 class="mt-5">Enrollment History</h3>
               <table class="table">
               <thead>
               <tr>
@@ -58,7 +43,8 @@ if (uId === null && typeof uId !== "string") {
                 <tbody id="t-body">
                 </tbody>
               </table> 
-          </section>
+          	  </section>
+			  </div>
       `;
 
 			// target the table body
@@ -73,14 +59,18 @@ if (uId === null && typeof uId !== "string") {
 				var nameNode = document.createElement("TD");
 				var courseNode = document.createElement("TD");
 				var statusNode = document.createElement("TD");
-				var coursename = document.createTextNode(`${item.courseName}`);
 
+				var coursename = document.createTextNode(`${item.courseName}`);
 				var toString = new Date(`${item.enrolledOn}`).toDateString().slice(4);
 				var date = document.createTextNode(`${toString}`);
 				var status = document.createTextNode(`${item.status}`);
+
 				nameNode.appendChild(coursename);
 				courseNode.appendChild(date);
 				statusNode.appendChild(status);
+
+				nameNode.style.fontWeight = "bold";
+				nameNode.style.color = "#575555";
 
 				trow.appendChild(nameNode);
 				trow.appendChild(courseNode);
